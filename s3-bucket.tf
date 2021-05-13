@@ -3,4 +3,10 @@ module "s3-bucket" {
   version = "2.1.0"
   # insert required variables here
   bucket_prefix = "rogergomez"
+  tags = {
+    name        = "${var.prefix}-vpc-${var.region}"
+    environment = "Production"
+    Department  = "Storage"
+    Billable    = "Hashicorp"
+  }
 }
